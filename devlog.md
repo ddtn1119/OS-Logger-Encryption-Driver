@@ -1,0 +1,1 @@
+[2025-02-26 16:17] CS 4348.501: The logger program seems to be the easiest since all we do is printing out the log message with time frames.
