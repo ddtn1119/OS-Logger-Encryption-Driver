@@ -1,0 +1,8 @@
+2025-02-28 17:50 [START] Driver started.
+2025-02-28 17:50 [PASSWORD] hello
+2025-02-28 17:50 [INFO] Password set to hello.
+2025-02-28 17:50 [ENCRYPT] hello
+2025-02-28 17:50 [RESPONSE] Encrypted result: OIWWC
+2025-02-28 17:50 [DECRYPT] oiwwc
+2025-02-28 17:50 [RESPONSE] Decrypted result: HELLO
+2025-02-28 17:50 [HISTORY] Command history displayed.

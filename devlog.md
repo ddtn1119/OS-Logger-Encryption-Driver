@@ -32,3 +32,6 @@ At 15:33, PASSWORD works, however, all other commands do not work very well... s
 After testing multiple times, I don't know why error still occurs such as passkey not set...
 Then, I found out that the problems are due to miscommunication between Driver and Encryption... the structure/wording do not match. I fixed them accordingly.
 After I fixed all issues, deleted all unnecessary/redundant prompts/code in Encryption.java, and ensured that both programs communicated effectively, all commands worked!
+Then, the history command does not work well (invalid input format error occurred), I figured out that the error is due to the handle input splitting.
+I fixed the issue by modifying the input handling to allow single-word commands like "HISTORY" and "QUIT".
+But then the QUIT command is not sent to the encryption program and logger before exiting the program.
