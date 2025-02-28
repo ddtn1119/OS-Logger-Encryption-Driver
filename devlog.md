@@ -24,3 +24,11 @@ Note: I forgot to create this devlog.md before starting this project. I created 
 
 [2025-02-07 23:00]
 In this night session, I plan to start implementing the Driver program. I will set up the template for the Driver program which includes the scanner to read user inputs. First, I wrote the code that checks the input command from the user is correct (Usage: java Driver <log_file_name>). The log file name should be in String and the command history should be store in a list/array list. I tried to build the process to execute the logger first using Process class. PrintWriter will be used to write text to output stream. For the encryption program process. I also built the process, created a PrintWriter (to write results to the log file) and BufferedReader to read user inputs. Then I created the menu and prompts to prompt user to enter commands and loop until the user quits. At this point I am a bit tired but I will continue working on this tomorrow or later. I will write the logic to execute logger and encryption commands as I know.
+
+[2025-02-28 14:57]
+Today I will be implementing the actual logic for the program loop. 
+After finishing the loop, when I tested PASSWORD, ENCRYPT, and DECRYPT, the results made no sense, so I try again...
+At 15:33, PASSWORD works, however, all other commands do not work very well... so I deleted my debugging prompts in Encryption and Logger and tried again...
+After testing multiple times, I don't know why error still occurs such as passkey not set...
+Then, I found out that the problems are due to miscommunication between Driver and Encryption... the structure/wording do not match. I fixed them accordingly.
+After I fixed all issues, deleted all unnecessary/redundant prompts/code in Encryption.java, and ensured that both programs communicated effectively, all commands worked!

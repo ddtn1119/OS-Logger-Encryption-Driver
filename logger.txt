@@ -1,7 +1,24 @@
-2025-02-27 18:21 [START] logging started.
-2025-02-27 18:21 [MESSAGE] hello
-2025-02-27 18:22 [MESSAGE] today is 27 feb 2025
-2025-02-27 18:22 [MESSAGE] current time is 6:22pm
-2025-02-27 18:22 [MESSAGE] i hope ur doin well
-2025-02-27 18:22 [MESSAGE] see you again
-2025-02-27 18:22 [MESSAGE] bye
+2025-02-28 15:57 [START] Driver started.
+2025-02-28 15:57 [PASSWORD] hello
+2025-02-28 15:57 [INFO] Password set to hello.
+2025-02-28 15:58 [ENCRYPT] hello
+2025-02-28 15:58 [RESPONSE] Encrypted result: OIWWC
+2025-02-28 15:58 [DECRYPT] OIWWC
+2025-02-28 15:58 [RESPONSE] Decrypted result: HELLO
+2025-02-28 15:58 [PASSWORD] ayush
+2025-02-28 15:58 [INFO] Password set to ayush.
+2025-02-28 15:58 [ENCRYPT] geeksforgeeks
+2025-02-28 15:58 [RESPONSE] Encrypted result: GCYCZFMLYLEIM
+2025-02-28 15:58 [DECRYPT] gcyzcfmlyleim
+2025-02-28 15:58 [RESPONSE] Decrypted result: GEEHVFORGEEKS
+2025-02-28 16:04 [START] Driver started.
+2025-02-28 16:04 [PASSWORD] ayush
+2025-02-28 16:04 [INFO] Password set to ayush.
+2025-02-28 16:04 [ENCRYPT] geeksforgeeks
+2025-02-28 16:04 [RESPONSE] Encrypted result: GCYCZFMLYLEIM
+2025-02-28 16:04 [DECRYPT] gcyczfmlyleim
+2025-02-28 16:04 [RESPONSE] Decrypted result: GEEKSFORGEEKS
+2025-02-28 16:04 [ENCRYPT] geeks for geeks
+2025-02-28 16:04 [RESPONSE] Encrypted result: GCYCZ DIJ GCYCZ
+2025-02-28 16:05 [DECRYPT] gcycz dlj gcycz
+2025-02-28 16:05 [RESPONSE] Decrypted result: GEEKS FRR GEEKS

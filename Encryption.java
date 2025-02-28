@@ -54,13 +54,6 @@ public class Encryption {
         // create a scanner to scan user input
         Scanner scan = new Scanner(System.in);
         // start the encryption program
-        // prompts
-        System.out.println("Welcome to the Vigenere Cypher Encryption Program.");
-        System.out.println("List of possible commands:");
-        System.out.println("- PASS <passkey>: Set up a passkey");
-        System.out.println("- ENCRYPT <message>: Encrypt message using stored passkey");
-        System.out.println("- DECRYPT <message>: Decrypt message using stored passkey");
-        System.out.println("- QUIT: Exit the program");
         // keep running the program until the user quits.
         while (true) {
             String input = scan.nextLine().trim();
@@ -76,10 +69,9 @@ public class Encryption {
             }
             String action = p[0];
             String content = p[1];
-            // if user types "PASS", set up a passkey
-            if (action.equalsIgnoreCase("PASS")) {
+            // if user types "PASSWORD", set up a passkey
+            if (action.equalsIgnoreCase("PASSWORD")) {
                 passkey = content;
-                System.out.println("Passkey set up successfully!");
                 continue;
             }
             // if the passkey is not set up, print the error message
