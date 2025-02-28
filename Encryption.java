@@ -12,18 +12,20 @@ public class Encryption {
         passkey = passkey.toUpperCase();
         // loop through each character in the plain text message
         for (int i = 0; i < plain_text.length(); i++) {
-            // get the current character
-            char current_char = plain_text.charAt(i);
-            // get the corresponding character from the passkey
-            char passkey_char = passkey.charAt(i % passkey.length());
-            // encrypt the current character using the passkey character
-            char encrypted_char = (char) ((current_char + passkey_char) % 128);
-            // append the encrypted character to the encrypted message
+            char plain_char = plain_text.charAt(i); // get each character in the plain text message
+            char passkey_char = passkey.charAt(i % passkey.length()); // get each character in the passkey
+            // ignore all non-alphabet characters
+            if (plain_char < 'A' || plain_char > 'Z') {
+                encrypted_message.append(plain_char);
+                continue;
+            }
+            char encrypted_char = (char) (((plain_char - 'A' + (passkey_char - 'A')) % 26) + 'A');
             encrypted_message.append(encrypted_char);
         }
         // return the encrypted message as a string
         return encrypted_message.toString();
     }
+
     // String function to decrypt the Vigenere cypher
     public static String decrypt(String encrypted_message, String passkey) {
         // create a StringBuilder to store the decrypted message
@@ -33,24 +35,27 @@ public class Encryption {
         passkey = passkey.toUpperCase();
         // loop through each character in the encrypted message
         for (int i = 0; i < encrypted_message.length(); i++) {
-            // get the current character
-            char current_char = encrypted_message.charAt(i);
-            // get the corresponding character from the passkey
-            char passkey_char = passkey.charAt(i % passkey.length());
-            // decrypt the current character using the passkey character
-            char decrypted_char = (char) ((current_char - passkey_char + 128) % 128);
-            // append the decrypted character to the decrypted message
+            char encrypted_char = encrypted_message.charAt(i); // get each character in the encrypted message
+            char passkey_char = passkey.charAt(i % passkey.length()); // get each character in the passkey
+            // ignore all non-alphabet characters
+            if (encrypted_char < 'A' || encrypted_char > 'Z') {
+                decrypted_message.append(encrypted_char);
+                continue;
+            }
+            char decrypted_char = (char) (((encrypted_char - passkey_char + 26) % 26) + 'A');
             decrypted_message.append(decrypted_char);
         }
         // return the decrypted message as a string
         return decrypted_message.toString();
     }
+
+    // main function
     public static void main(String[] args) {
         // create a scanner to scan user input
         Scanner scan = new Scanner(System.in);
         // start the encryption program
         // prompts
-        System.out.println("Welcome to the Vigenère Cypher Encryption Program.");
+        System.out.println("Welcome to the Vigenere Cypher Encryption Program.");
         System.out.println("List of possible commands:");
         System.out.println("- PASS <passkey>: Set up a passkey");
         System.out.println("- ENCRYPT <message>: Encrypt message using stored passkey");
@@ -60,7 +65,7 @@ public class Encryption {
         while (true) {
             String input = scan.nextLine().trim();
             if (input.equalsIgnoreCase("QUIT")) {
-                System.out.println("Program terminated."); // if user types "QUIT", terminate the program.
+                System.out.println("Encryption program terminated."); // if user types "QUIT", terminate the program.
                 break;
             }
             // split the input into separate words
