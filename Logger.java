@@ -12,27 +12,8 @@ public class Logger {
             System.err.println("Error occurred when clearing log file: " + e.getMessage());
         }
     }
-    
-    // void function to execute the process
-    private static void executeProcess(String logEntry) {
-        // run the cmd.exe shell for Windows
-        ProcessBuilder process_builder = new ProcessBuilder("cmd.exe", "/c", "echo", logEntry);
-        try {
-            // build a process
-            Process process = process_builder.start();
-            // read processes
-            try (BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    System.out.println("Process output: " + line);
-                }
-            }
-            process.waitFor();
-        } 
-        catch (IOException | InterruptedException e) {
-            System.err.println("Error occurred when executing process: " + e.getMessage());
-        }
-    }
+
+    // main function
     public static void main(String[] args) {
         // print the error message if the number of arguments is not equal to 1 and the argument is not correct.
         if (args.length != 1) {
@@ -87,9 +68,7 @@ public class Logger {
                 // print the log message
                 log_writer.println(logEntry);
                 log_writer.flush();
-                System.out.println("Logged successfully!");
-                // execute the process
-                executeProcess(logEntry);
+                System.out.println("Logged successfully! Please check your log file.");
             }
         } 
         catch (IOException e) {

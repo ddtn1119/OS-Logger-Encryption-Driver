@@ -1,0 +1,7 @@
+2025-02-27 18:21 [START] logging started.
+2025-02-27 18:21 [MESSAGE] hello
+2025-02-27 18:22 [MESSAGE] today is 27 feb 2025
+2025-02-27 18:22 [MESSAGE] current time is 6:22pm
+2025-02-27 18:22 [MESSAGE] i hope ur doin well
+2025-02-27 18:22 [MESSAGE] see you again
+2025-02-27 18:22 [MESSAGE] bye
