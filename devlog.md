@@ -18,3 +18,6 @@ However, after I finished this issue above, the printed results are not correct 
 
 [2025-02-07 18:09]
 I figured out that the issue came from the encryption formula. So for the encryption formula, instead of "(char) ((current_char + passkey_char) % 128)", I used "char encrypted_char = (char) (((plain_char - 'A' + (passkey_char - 'A')) % 26) + 'A')". For the decryption formula, I used the following formula "char decryptedChar = (char) (((encryptedChar - passkeyChar + 26) % 26) + 'A')". After compiling & testing the Encryption program, I found out that it finally works successfully (e.g., "HELLO" is encrypted to "OIWWC"). All functions work perfectly, except that I deliberately made the output structure different from the output in the project 1 description to make it look more "professional" a little bit. I will continue updating and monitoring this program if necessary, then I will move to the Driver program portion of this project. 
+
+[2025-02-07 18:38]
+Note: I forgot to create this devlog.md before starting this project. I created this devlog while working on the Logger program instead. My apologies.
