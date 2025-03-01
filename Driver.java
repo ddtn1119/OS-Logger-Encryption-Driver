@@ -24,17 +24,20 @@ public class Driver {
         }
 
         String log_file_name = args[0];
+        // store the command history using array list
         List<String> cmd_history = new ArrayList<>();
+        // initialise the string of password to be empty
         String password = "";
 
         try {
+            // initialise the logger process
             Process log_process = new ProcessBuilder("java", "Logger", log_file_name).start();
             PrintWriter log_writer = new PrintWriter(log_process.getOutputStream(), true);
-
+            // initialise the encryption process
             Process encryption_process = new ProcessBuilder("java", "Encryption").start();
             BufferedReader encryption_reader = new BufferedReader(new InputStreamReader(encryption_process.getInputStream()));
             PrintWriter encryption_writer = new PrintWriter(encryption_process.getOutputStream(), true);
-
+            // display the menu
             log_writer.println("START Driver started.");
             System.out.println("The driver program started.\n");
             System.out.println("List of available commands:");
@@ -44,18 +47,20 @@ public class Driver {
             System.out.println("4. HISTORY");
             System.out.println("5. QUIT\n");
             System.out.println("Note: Non-alphabetical characters in <password> or <message> are not allowed.\n");
-
+            // create a scanner to read user inputs
             Scanner scan = new Scanner(System.in);
-
+            // loop until the user quits
             while (true) {
+                // prompt the user to enter command
                 System.out.print("Enter command: ");
+                // remove leading or trailing whitespaces in commands
                 String cmd = scan.nextLine().trim();
+                // still continue even if the command is empty
                 if (cmd.isEmpty()) continue;
-
-                // Split command
+                // split command
                 String[] p = cmd.split("\\s+", 2);
                 String action = p[0];
-                String message = (p.length > 1) ? p[1] : "";
+                String message = (p.length > 1) ? p[1] : ""; // in some commands like HISTORY or QUIT, we don't need <message>
 
                 // HISTORY SELECTION MENU
                 if (action.equalsIgnoreCase("HISTORY")) {
@@ -63,11 +68,12 @@ public class Driver {
                         System.out.println("History is empty.");
                         continue;
                     }
+                    // give each command in history its number index for references
                     System.out.println("Command history:");
                     for (int i = 0; i < cmd_history.size(); i++) {
                         System.out.println((i + 1) + ". " + cmd_history.get(i));
                     }
-
+                    // prompt the user to enter a number to reuse a command
                     System.out.print("Enter a number to reuse a command, or 0 to return: ");
                     int choice;
                     try {
@@ -77,12 +83,12 @@ public class Driver {
                             System.out.println("Invalid selection.");
                             continue;
                         }
-                    } catch (NumberFormatException e) {
+                    } 
+                    catch (NumberFormatException e) {
                         System.out.println("Invalid input.");
                         continue;
                     }
-
-                    // Reuse selected command
+                    // reuse selected command
                     cmd = cmd_history.get(choice - 1);
                     System.out.println("Reusing command: " + cmd);
                     log_writer.println("HISTORY Selected command: " + cmd);
@@ -90,17 +96,17 @@ public class Driver {
                     action = p[0];
                     message = (p.length > 1) ? p[1] : "";
                 }
-
-                // logging QUIT
+                // logging QUIT into the log file
                 if (action.equalsIgnoreCase("QUIT")) {
                     log_writer.println("QUIT Driver terminated.");
                     log_writer.flush(); // force the log writer to log the command
                     log_writer.close(); // close the log writer
-                    log_process.waitFor(); // wait until the writer is done
+                    log_process.waitFor(); // wait until the log writer is done
                     // clean up everything before terminating the program
                     encryption_writer.close();
                     encryption_reader.close();
                     scan.close();
+                    // destroy all processes before terminating the program
                     log_process.destroy();
                     encryption_process.destroy();
                     System.out.println("Encryption program terminated.");
@@ -112,14 +118,19 @@ public class Driver {
                     if (containsNonAlphabetic(message)) {
                         // non-alphabetic characters in passkey are not allowed, thus making passkey invalid.
                         System.out.println("ERROR: Passkey contains non-alphabetic characters.");
-                        log_writer.println("ERROR: Passkey contains non-alphabetic characters.");
-                    } else {
+                        log_writer.println("ERROR Passkey contains non-alphabetic characters.");
+                    } 
+                    else {
+                        // store message in the password variable
                         password = message;
                         encryption_writer.println("PASSWORD " + password);
                         encryption_writer.flush();
+                        // replace the password with stars
+                        String hidden_password = password.replaceAll("[a-zA-Z]", "*");
                         System.out.println("Password set successfully.");
-                        log_writer.println("INFO: Password set successfully.");
-                        cmd_history.add("PASSWORD [HIDDEN]");  // hide password in history
+                        log_writer.println("PASSWORD " + hidden_password);
+                        log_writer.println("INFO Password set successfully.");
+                        cmd_history.add("PASSWORD " + hidden_password);  // hide password in history
                     }
                 }
                 // ENCRYPTION handling
@@ -132,7 +143,8 @@ public class Driver {
                     encryption_writer.flush();
                     String encrypted_response = encryption_reader.readLine();
                     System.out.println(encrypted_response);
-                    log_writer.println("RESPONSE " + encrypted_response);
+                    log_writer.println("ENCRYPT " + message);
+                    log_writer.println("ENCRYPTED_RESPONSE " + encrypted_response);
                     cmd_history.add("ENCRYPT " + message);  // store original message (not the result)
                 }
                 // DECRYPTION handling
@@ -145,7 +157,8 @@ public class Driver {
                     encryption_writer.flush();
                     String decrypted_response = encryption_reader.readLine();
                     System.out.println(decrypted_response);
-                    log_writer.println("RESPONSE " + decrypted_response);
+                    log_writer.println("DECRYPT " + message);
+                    log_writer.println("DECRYPTED_RESPONSE " + decrypted_response);
                     cmd_history.add("DECRYPT " + message);  // store original message (not the result)
                 }
                 // invalid command error handling
@@ -153,7 +166,8 @@ public class Driver {
                     System.out.println("Invalid action. Please enter PASSWORD, ENCRYPT, DECRYPT, HISTORY, or QUIT.");
                 }
             }
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
             System.err.println("Error occurred: " + e.getMessage());
         }
     }
