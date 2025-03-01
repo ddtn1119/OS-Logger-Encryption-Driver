@@ -34,4 +34,5 @@ Then, I found out that the problems are due to miscommunication between Driver a
 After I fixed all issues, deleted all unnecessary/redundant prompts/code in Encryption.java, and ensured that both programs communicated effectively, all commands worked!
 Then, the history command does not work well (invalid input format error occurred), I figured out that the error is due to the handle input splitting.
 I fixed the issue by modifying the input handling to allow single-word commands like "HISTORY" and "QUIT".
-But then the QUIT command is not sent to the encryption program and logger before exiting the program.
+But then the QUIT command is not sent to the encryption program and logger before exiting the program. I don't know how.
+And after this, I implemented error checking to my code. There were so many issues happening because programs miscommunicated, like error checking did not work properly. It did not check errors properly. But they were all fixed.
