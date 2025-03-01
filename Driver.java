@@ -3,46 +3,39 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Driver {
-    // check if the input to encryption, decryption, or passkey contains non-alphabetic characters. 
-    // if it does, it is invalid
+    // check if the input contains non-alphabetic characters
     public static boolean containsNonAlphabetic(String str) {
         if (str == null || str.isEmpty()) {
-            return false; // handle empty/null strings as needed
+            return false;
         }
-        for (int i = 0; i < str.length(); i++) {
-            if (!Character.isLetter(str.charAt(i))) {
+        for (char c : str.toCharArray()) {
+            if (!Character.isLetter(c)) {
                 return true;
             }
         }
         return false;
     }
-    // main function
+
     public static void main(String[] args) {
-        // ensure that the user input format on the terminal is correct
         if (args.length != 1) {
             System.out.println("Correct usage: java Driver <log_file_name>");
             return;
         }
-        // get the log file name from the command line argument
+
         String log_file_name = args[0];
-        // store the history of commands in a list
         List<String> cmd_history = new ArrayList<>();
-        // store the password in String
         String password = "";
 
         try {
-            // build and start the logger process first
             Process log_process = new ProcessBuilder("java", "Logger", log_file_name).start();
             PrintWriter log_writer = new PrintWriter(log_process.getOutputStream(), true);
-            // then build and start the encryption process
+
             Process encryption_process = new ProcessBuilder("java", "Encryption").start();
             BufferedReader encryption_reader = new BufferedReader(new InputStreamReader(encryption_process.getInputStream()));
             PrintWriter encryption_writer = new PrintWriter(encryption_process.getOutputStream(), true);
-            // start the driver
+
             log_writer.println("START Driver started.");
-            // display the menu
             System.out.println("The driver program started.\n");
             System.out.println("List of available commands:");
             System.out.println("1. PASSWORD <password>");
@@ -50,70 +43,87 @@ public class Driver {
             System.out.println("3. DECRYPT <message>");
             System.out.println("4. HISTORY");
             System.out.println("5. QUIT\n");
-            System.out.println("Note: All non-alphabetical characters in <password> or <message> will be ignored.\n");
-            // create a scanner to read user inputs from the console.
+            System.out.println("Note: Non-alphabetical characters in <password> or <message> are not allowed.\n");
+
             Scanner scan = new Scanner(System.in);
-            // loop until the user quits
+
             while (true) {
-                // prompt the user to enter command
                 System.out.print("Enter command: ");
                 String cmd = scan.nextLine().trim();
-                // continue if command is empty
-                if (cmd.isEmpty()) {
-                    continue;
-                }
-                // log the command
-                log_writer.println(cmd);
-                // split the input into separate words
+                if (cmd.isEmpty()) continue;
+
+                // Split command
                 String[] p = cmd.split("\\s+", 2);
                 String action = p[0];
-                String message = (p.length > 1) ? p[1] : ""; // avoids errors in the commands that require no message.
-                // if a message is required but missing, print an error.
-                if (message.isEmpty() && (action.equalsIgnoreCase("PASSWORD") || action.equalsIgnoreCase("ENCRYPT") || action.equalsIgnoreCase("DECRYPT"))) {
-                    System.out.println("Invalid input format. It should be '<ACTION> <MESSAGE>'");
-                    continue;
-                }
-                // add command to history BEFORE checking for QUIT
-                if (!action.equalsIgnoreCase("HISTORY")) {
-                    cmd_history.add(cmd);
+                String message = (p.length > 1) ? p[1] : "";
+
+                // HISTORY SELECTION MENU
+                if (action.equalsIgnoreCase("HISTORY")) {
+                    if (cmd_history.isEmpty()) {
+                        System.out.println("History is empty.");
+                        continue;
+                    }
+                    System.out.println("Command history:");
+                    for (int i = 0; i < cmd_history.size(); i++) {
+                        System.out.println((i + 1) + ". " + cmd_history.get(i));
+                    }
+
+                    System.out.print("Enter a number to reuse a command, or 0 to return: ");
+                    int choice;
+                    try {
+                        choice = Integer.parseInt(scan.nextLine().trim());
+                        if (choice == 0) continue;
+                        if (choice < 1 || choice > cmd_history.size()) {
+                            System.out.println("Invalid selection.");
+                            continue;
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("Invalid input.");
+                        continue;
+                    }
+
+                    // Reuse selected command
+                    cmd = cmd_history.get(choice - 1);
+                    System.out.println("Reusing command: " + cmd);
+                    log_writer.println("HISTORY Selected command: " + cmd);
+                    p = cmd.split("\\s+", 2);
+                    action = p[0];
+                    message = (p.length > 1) ? p[1] : "";
                 }
 
-                // check if the user wants to quit
+                // logging QUIT
                 if (action.equalsIgnoreCase("QUIT")) {
-                    // write QUIT to the log
                     log_writer.println("QUIT Driver terminated.");
-                    log_writer.flush();  // ensure the QUIT message is flushed to the log
-                    // do not close log_writer immediately, as it will send EOF; wait for Logger to process it first.
-                    // ensure that the Logger has processed and written the QUIT log message before continuing.
-                    log_process.waitFor();  // ensure the Logger process has finished
-                    // after the Logger finishes processing the QUIT, it's safe to terminate everything.
+                    log_writer.flush();
                     log_writer.close();
-                    encryption_writer.close();  // close the encryption writer
-                    encryption_reader.close();  // close the encryption reader
-                    scan.close();  // close the scanner
-                    // clean up the processes
+                    log_process.waitFor();
+                    encryption_writer.close();
+                    encryption_reader.close();
+                    scan.close();
                     log_process.destroy();
                     encryption_process.destroy();
                     System.out.println("Encryption program terminated.");
-                    break;  // exit the loop and terminate the program
+                    break;
                 }
-                // if the action is "PASSWORD", send "PASS <password>" to the encryption process
+
+                // PASSWORD handling (but do NOT log the actual password)
                 if (action.equalsIgnoreCase("PASSWORD")) {
-                    // Validate that the passkey contains only alphabetic characters
                     if (containsNonAlphabetic(message)) {
+                        // non-alphabetic characters in passkey are not allowed, thus making passkey invalid.
                         System.out.println("ERROR: Passkey contains non-alphabetic characters.");
                         log_writer.println("ERROR: Passkey contains non-alphabetic characters.");
                     } else {
                         password = message;
-                        encryption_writer.println("PASSWORD " + password); // Send "PASSWORD <password>" to the Encryption process
+                        encryption_writer.println("PASSWORD " + password);
                         encryption_writer.flush();
-                        System.out.println("Password set successfully to " + password + ".");
-                        log_writer.println("INFO: Password set to " + password + ".");
+                        System.out.println("Password set successfully.");
+                        log_writer.println("INFO: Password set successfully.");
+                        cmd_history.add("PASSWORD [HIDDEN]");  // hide password in history
                     }
                 }
-                // if the action is "ENCRYPT", send the message to the encryption process
+                // ENCRYPTION handling
                 else if (action.equalsIgnoreCase("ENCRYPT")) {
-                    if(password.isEmpty()){
+                    if (password.isEmpty()) {
                         System.out.println("Error: No password set. Please use PASSWORD <password>.");
                         continue;
                     }
@@ -122,10 +132,11 @@ public class Driver {
                     String encrypted_response = encryption_reader.readLine();
                     System.out.println(encrypted_response);
                     log_writer.println("RESPONSE " + encrypted_response);
+                    cmd_history.add("ENCRYPT " + message);  // store original message (not the result)
                 }
-                // if the action is "DECRYPT", send the message to the encryption process
+                // DECRYPTION handling
                 else if (action.equalsIgnoreCase("DECRYPT")) {
-                    if(password.isEmpty()){
+                    if (password.isEmpty()) {
                         System.out.println("Error: No password set. Please use PASSWORD <password>.");
                         continue;
                     }
@@ -134,22 +145,14 @@ public class Driver {
                     String decrypted_response = encryption_reader.readLine();
                     System.out.println(decrypted_response);
                     log_writer.println("RESPONSE " + decrypted_response);
+                    cmd_history.add("DECRYPT " + message);  // store original message (not the result)
                 }
-                // if the action is "HISTORY", display the command history
-                else if (action.equalsIgnoreCase("HISTORY")) {
-                    System.out.println("Command history:");
-                    for (String history : cmd_history) {
-                        System.out.println(history);
-                    }
-                    log_writer.println("HISTORY Command history displayed.");
-                    continue;
-                }
+                // invalid command error handling
                 else {
                     System.out.println("Invalid action. Please enter PASSWORD, ENCRYPT, DECRYPT, HISTORY, or QUIT.");
                 }
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.err.println("Error occurred: " + e.getMessage());
         }
     }
