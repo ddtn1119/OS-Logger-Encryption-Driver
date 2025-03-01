@@ -1,4 +1,4 @@
-CS 4348.501 Project 1 Devlog
+# CS 4348.501 Project 1 Devlog
 
 [2025-02-26 16:17]
 The logger program seems to be the easiest since all we do is printing out the log message with time frames.
