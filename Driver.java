@@ -94,9 +94,10 @@ public class Driver {
                 // logging QUIT
                 if (action.equalsIgnoreCase("QUIT")) {
                     log_writer.println("QUIT Driver terminated.");
-                    log_writer.flush();
-                    log_writer.close();
-                    log_process.waitFor();
+                    log_writer.flush(); // force the log writer to log the command
+                    log_writer.close(); // close the log writer
+                    log_process.waitFor(); // wait until the writer is done
+                    // clean up everything before terminating the program
                     encryption_writer.close();
                     encryption_reader.close();
                     scan.close();
