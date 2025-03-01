@@ -5,6 +5,19 @@ import java.util.Scanner;
 
 
 public class Driver {
+    // check if the input to encryption, decryption, or passkey contains non-alphabetic characters. 
+    // if it does, it is invalid
+    public static boolean containsNonAlphabetic(String str) {
+        if (str == null || str.isEmpty()) {
+            return false; // handle empty/null strings as needed
+        }
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isLetter(str.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
     // main function
     public static void main(String[] args) {
         // ensure that the user input format on the terminal is correct
@@ -86,11 +99,17 @@ public class Driver {
                 }
                 // if the action is "PASSWORD", send "PASS <password>" to the encryption process
                 if (action.equalsIgnoreCase("PASSWORD")) {
-                    password = message;
-                    encryption_writer.println("PASSWORD " + password); // send "PASSWORD <password>" to Encryption process
-                    encryption_writer.flush();
-                    System.out.println("Password set successfully to " + password + ".");
-                    log_writer.println("INFO Password set to " + password + ".");
+                    // Validate that the passkey contains only alphabetic characters
+                    if (containsNonAlphabetic(message)) {
+                        System.out.println("ERROR: Passkey contains non-alphabetic characters.");
+                        log_writer.println("ERROR: Passkey contains non-alphabetic characters.");
+                    } else {
+                        password = message;
+                        encryption_writer.println("PASSWORD " + password); // Send "PASSWORD <password>" to the Encryption process
+                        encryption_writer.flush();
+                        System.out.println("Password set successfully to " + password + ".");
+                        log_writer.println("INFO: Password set to " + password + ".");
+                    }
                 }
                 // if the action is "ENCRYPT", send the message to the encryption process
                 else if (action.equalsIgnoreCase("ENCRYPT")) {

@@ -25,6 +25,20 @@ public class Encryption {
         // return the encrypted message as a string
         return encrypted_message.toString();
     }
+    
+    // check if the input to encryption, decryption, or passkey contains non-alphabetic characters. 
+    // if it does, it is invalid
+    public static boolean containsNonAlphabetic(String str) {
+        if (str == null || str.isEmpty()) {
+            return false; // handle empty/null strings as needed
+        }
+        for (int i = 0; i < str.length(); i++) {
+            if (!Character.isLetter(str.charAt(i))) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     // String function to decrypt the Vigenere cypher
     public static String decrypt(String encrypted_message, String passkey) {
@@ -71,7 +85,12 @@ public class Encryption {
             String content = p[1];
             // if user types "PASSWORD", set up a passkey
             if (action.equalsIgnoreCase("PASSWORD")) {
-                passkey = content;
+                if (containsNonAlphabetic(content)) {
+                    System.out.println("ERROR: Passkey contains non-alphabetic characters");
+                } 
+                else {
+                    passkey = content;
+                }
                 continue;
             }
             // if the passkey is not set up, print the error message
@@ -81,12 +100,22 @@ public class Encryption {
             }
             // if user types "ENCRYPT", encrypt the plain text message
             if (action.equalsIgnoreCase("ENCRYPT")) {
-                System.out.println("Encrypted result: " + encrypt(content, passkey));
+                if(containsNonAlphabetic(content)){
+                    System.out.println("ERROR: Message contains non-alphabetic characters");               
+                }
+                else{
+                    System.out.println("Encrypted result: " + encrypt(content, passkey));
+                }
                 continue;
             }
             // if user types "DECRYPT", decrypt the Vigenere cypher
             if (action.equalsIgnoreCase("DECRYPT")) {
-                System.out.println("Decrypted result: " + decrypt(content, passkey));
+                if(containsNonAlphabetic(content)){
+                    System.out.println("ERROR: Message contains non-alphabetic characters");               
+                }
+                else{
+                    System.out.println("Decrypted result: " + decrypt(content, passkey));
+                }
                 continue;
             }
             // if the action is not valid, print the error message

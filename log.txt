@@ -1,8 +1,25 @@
-2025-02-28 17:50 [START] Driver started.
-2025-02-28 17:50 [PASSWORD] hello
-2025-02-28 17:50 [INFO] Password set to hello.
-2025-02-28 17:50 [ENCRYPT] hello
-2025-02-28 17:50 [RESPONSE] Encrypted result: OIWWC
-2025-02-28 17:50 [DECRYPT] oiwwc
-2025-02-28 17:50 [RESPONSE] Decrypted result: HELLO
-2025-02-28 17:50 [HISTORY] Command history displayed.
+2025-02-28 18:44 [START] Driver started.
+2025-02-28 18:44 [PASSWORD] hello
+2025-02-28 18:44 [INFO:] Password set to hello.
+2025-02-28 18:44 [ENCRYPT] hello
+2025-02-28 18:44 [RESPONSE] Encrypted result: OIWWC
+2025-02-28 18:44 [PASSWORD] uauaa8
+2025-02-28 18:44 [ERROR:] Passkey contains non-alphabetic characters.
+2025-02-28 18:44 [ENCRYPT] hello
+2025-02-28 18:44 [RESPONSE] Encrypted result: OIWWC
+2025-02-28 18:44 [ENCRYPT] akaka99
+2025-02-28 18:44 [RESPONSE] ERROR: Message contains non-alphabetic characters
+2025-02-28 18:44 [DECRYPT] ajaka09
+2025-02-28 18:44 [RESPONSE] ERROR: Message contains non-alphabetic characters
+2025-02-28 18:44 [DECRYPT] oiwwc
+2025-02-28 18:44 [RESPONSE] Decrypted result: HELLO
+2025-02-28 18:45 [PASSWORD] kakak
+2025-02-28 18:45 [INFO:] Password set to kakak.
+2025-02-28 18:45 [ENCRYPT] hello
+2025-02-28 18:45 [RESPONSE] Encrypted result: REVLY
+2025-02-28 18:45 [DECRYPT] revly
+2025-02-28 18:45 [RESPONSE] Decrypted result: HELLO
+2025-02-28 18:45 [PASSWORD] 81818
+2025-02-28 18:45 [ERROR:] Passkey contains non-alphabetic characters.
+2025-02-28 18:45 [ENCRYPT] hello
+2025-02-28 18:45 [RESPONSE] Encrypted result: REVLY
