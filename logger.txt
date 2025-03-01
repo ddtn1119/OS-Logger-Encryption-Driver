@@ -57,3 +57,85 @@
 2025-02-28 22:33 [ENCRYPT] supershy
 2025-02-28 22:33 [ENCRYPTED_RESPONSE] Encrypted result: FDORARUH
 2025-02-28 22:33 [QUIT] Driver terminated.
+2025-02-28 22:50 [START] Driver started.
+2025-02-28 22:51 [PASSWORD] ***
+2025-02-28 22:51 [INFO] Password set successfully.
+2025-02-28 22:51 [ENCRYPT] ive
+2025-02-28 22:51 [ENCRYPTED_RESPONSE] Encrypted result: QQI
+2025-02-28 22:51 [DECRYPT] qqi
+2025-02-28 22:51 [DECRYPTED_RESPONSE] Decrypted result: IVE
+2025-02-28 22:51 [PASSWORD] **********
+2025-02-28 22:51 [INFO] Password set successfully.
+2025-02-28 22:51 [ENCRYPT] illit
+2025-02-28 22:51 [ENCRYPTED_RESPONSE] Encrypted result: TPDAX
+2025-02-28 22:51 [DECRYPT] tpdax
+2025-02-28 22:51 [DECRYPTED_RESPONSE] Decrypted result: ILLIT
+2025-02-28 22:51 [ENCRYPT] babymonster
+2025-02-28 22:51 [ENCRYPTED_RESPONSE] Encrypted result: METQQFNXBQC
+2025-02-28 22:51 [DECRYPT] metqqfnxbqc
+2025-02-28 22:51 [DECRYPTED_RESPONSE] Decrypted result: BABYMONSTER
+2025-02-28 22:51 [ENCRYPT] bts
+2025-02-28 22:51 [ENCRYPTED_RESPONSE] Encrypted result: MXK
+2025-02-28 22:51 [DECRYPT] mxk
+2025-02-28 22:51 [DECRYPTED_RESPONSE] Decrypted result: BTS
+2025-02-28 22:52 [ENCRYPT] oliviarodrigo
+2025-02-28 22:52 [ENCRYPTED_RESPONSE] Encrypted result: ZPANMRRTLDTKG
+2025-02-28 22:52 [DECRYPT] zpanmrrtldtkg
+2025-02-28 22:52 [DECRYPTED_RESPONSE] Decrypted result: OLIVIARODRIGO
+2025-02-28 22:52 [ENCRYPT] Hanni
+2025-02-28 22:52 [ENCRYPTED_RESPONSE] Encrypted result: SEFFM
+2025-02-28 22:52 [DECRYPT] seffm
+2025-02-28 22:52 [DECRYPTED_RESPONSE] Decrypted result: HANNI
+2025-02-28 22:52 [HISTORY] Selected command: ENCRYPT bts
+2025-02-28 22:52 [ENCRYPT] bts
+2025-02-28 22:52 [ENCRYPTED_RESPONSE] Encrypted result: MXK
+2025-02-28 22:52 [QUIT] Driver terminated.
+2025-02-28 22:56 [START] Driver started.
+2025-02-28 22:56 [PASSWORD] *********
+2025-02-28 22:56 [INFO] Password set successfully.
+2025-02-28 22:56 [ENCRYPT] straykids
+2025-02-28 22:56 [ENCRYPTED_RESPONSE] Encrypted result: KMIAWUQGK
+2025-02-28 22:56 [DECRYPT] kmiawuqgk
+2025-02-28 22:56 [DECRYPTED_RESPONSE] Decrypted result: STRAYKIDS
+2025-02-28 22:56 [HISTORY_RESPONSE] ERROR: You cannot reuse password command for security purposes. Please set up a new password.
+2025-02-28 22:57 [QUIT] Driver terminated.
+2025-02-28 23:00 [START] Driver started.
+2025-02-28 23:00 [PASSWORD] ****
+2025-02-28 23:00 [INFO] Password set successfully.
+2025-02-28 23:00 [ENCRYPT] mina
+2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: EIAA
+2025-02-28 23:00 [DECRYPT] aiaa
+2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: IINA
+2025-02-28 23:00 [ENCRYPT] momo
+2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: EOZO
+2025-02-28 23:00 [DECRYPT] eozo
+2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: MOMO
+2025-02-28 23:00 [ENCRYPT] nayeon
+2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: FALEGN
+2025-02-28 23:00 [DECRYPT] falegn
+2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: NAYEON
+2025-02-28 23:00 [ENCRYPT] jihyo
+2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: BIUYG
+2025-02-28 23:00 [DECRYPT] biuyg
+2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: JIHYO
+2025-02-28 23:00 [PASSWORD] *****
+2025-02-28 23:00 [INFO] Password set successfully.
+2025-02-28 23:00 [ENCRYPT] jeongyeon
+2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: CDILARDIL
+2025-02-28 23:00 [DECRYPT] cdilardil
+2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: JEONGYEON
+2025-02-28 23:01 [HISTORY_RESPONSE] ERROR: You cannot reuse password command for security purposes. Please set up a new password.
+2025-02-28 23:01 [HISTORY_RESPONSE] ERROR: You cannot reuse password command for security purposes. Please set up a new password.
+2025-02-28 23:01 [HISTORY] Selected command: ENCRYPT jeongyeon
+2025-02-28 23:01 [ENCRYPT] jeongyeon
+2025-02-28 23:01 [ENCRYPTED_RESPONSE] Encrypted result: CDILARDIL
+2025-02-28 23:01 [HISTORY] Selected command: DECRYPT cdilardil
+2025-02-28 23:01 [DECRYPT] cdilardil
+2025-02-28 23:01 [DECRYPTED_RESPONSE] Decrypted result: JEONGYEON
+2025-02-28 23:01 [HISTORY] Selected command: ENCRYPT jihyo
+2025-02-28 23:01 [ENCRYPT] jihyo
+2025-02-28 23:01 [ENCRYPTED_RESPONSE] Encrypted result: CHBWI
+2025-02-28 23:01 [HISTORY] Selected command: DECRYPT biuyg
+2025-02-28 23:01 [DECRYPT] biuyg
+2025-02-28 23:01 [DECRYPTED_RESPONSE] Decrypted result: IJAAM
+2025-02-28 23:01 [QUIT] Driver terminated.

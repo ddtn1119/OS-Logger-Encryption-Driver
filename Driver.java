@@ -89,12 +89,20 @@ public class Driver {
                         continue;
                     }
                     // reuse selected command
-                    cmd = cmd_history.get(choice - 1);
-                    System.out.println("Reusing command: " + cmd);
-                    log_writer.println("HISTORY Selected command: " + cmd);
+                    cmd = cmd_history.get(choice - 1); 
                     p = cmd.split("\\s+", 2);
                     action = p[0];
                     message = (p.length > 1) ? p[1] : "";
+                    // prevent reuse of password command
+                    if (action.equalsIgnoreCase("PASSWORD")) {
+                        System.out.println("ERROR: You cannot reuse password command for security purposes. Please set up a new password.");
+                        log_writer.println("HISTORY Selected command: " + cmd);
+                        log_writer.println("HISTORY_RESPONSE ERROR: You cannot reuse password command for security purposes. Please set up a new password.");
+                        continue;
+                    }
+                    // otherwise, log and execute the selected command
+                    System.out.println("Reusing command: " + cmd);
+                    log_writer.println("HISTORY Selected command: " + cmd);
                 }
                 // logging QUIT into the log file
                 if (action.equalsIgnoreCase("QUIT")) {
