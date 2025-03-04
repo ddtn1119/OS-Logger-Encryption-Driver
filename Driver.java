@@ -73,6 +73,7 @@ public class Driver {
                     for (int i = 0; i < cmd_history.size(); i++) {
                         System.out.println((i + 1) + ". " + cmd_history.get(i));
                     }
+                    log_writer.println("HISTORY Command history displayed.");
                     // prompt the user to enter a number to reuse a command
                     System.out.print("Enter a number to reuse a command, or 0 to return: ");
                     int choice;
