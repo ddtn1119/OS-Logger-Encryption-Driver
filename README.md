@@ -20,6 +20,7 @@ javac Driver.java
 java Driver logger.txt
 ```
 The text file `logger.txt` can have any names. If the file does not exist yet, it will be created.
+
 3. Enjoy the program!
 
 Notes:
