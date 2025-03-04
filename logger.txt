@@ -1,220 +1,75 @@
-2025-02-28 22:28 [START] Driver started.
-2025-02-28 22:28 [PASSWORD] **********
-2025-02-28 22:28 [INFO] Password set successfully.
-2025-02-28 22:28 [ERROR] Passkey contains non-alphabetic characters.
-2025-02-28 22:28 [ENCRYPT] hello hallo
-2025-02-28 22:28 [ENCRYPTED_RESPONSE] ERROR: Message contains non-alphabetic characters
-2025-02-28 22:29 [ENCRYPT] haruharu
-2025-02-28 22:29 [ENCRYPTED_RESPONSE] Encrypted result: HNUSUGLS
-2025-02-28 22:29 [DECRYPT] hnusugls
-2025-02-28 22:29 [DECRYPTED_RESPONSE] Decrypted result: HARUHARU
-2025-02-28 22:29 [DECRYPT] akk ka
-2025-02-28 22:29 [DECRYPTED_RESPONSE] ERROR: Message contains non-alphabetic characters
-2025-02-28 22:29 [HISTORY] Selected command: ENCRYPT hello hallo
-2025-02-28 22:29 [ENCRYPT] hello hallo
-2025-02-28 22:29 [ENCRYPTED_RESPONSE] ERROR: Message contains non-alphabetic characters
-2025-02-28 22:29 [QUIT] Driver terminated.
-2025-02-28 22:30 [START] Driver started.
-2025-02-28 22:30 [PASSWORD] *********
-2025-02-28 22:30 [INFO] Password set successfully.
-2025-02-28 22:30 [ENCRYPT] blackpink
-2025-02-28 22:30 [ENCRYPTED_RESPONSE] Encrypted result: CWAEUEQAU
-2025-02-28 22:30 [DECRYPT] cwaeueqau
-2025-02-28 22:30 [DECRYPTED_RESPONSE] Decrypted result: BLACKPINK
-2025-02-28 22:30 [ENCRYPT] aka aka
-2025-02-28 22:30 [ENCRYPTED_RESPONSE] ERROR: Message contains non-alphabetic characters
-2025-02-28 22:31 [ENCRYPT] seventeen
-2025-02-28 22:31 [ENCRYPTED_RESPONSE] Encrypted result: TPVGXIMRX
-2025-02-28 22:31 [DECRYPT] tpvgximrx
-2025-02-28 22:31 [DECRYPTED_RESPONSE] Decrypted result: SEVENTEEN
-2025-02-28 22:31 [ENCRYPT] twice
-2025-02-28 22:31 [ENCRYPTED_RESPONSE] Encrypted result: UHIEO
-2025-02-28 22:31 [DECRYPT] uhieo
-2025-02-28 22:31 [DECRYPTED_RESPONSE] Decrypted result: TWICE
-2025-02-28 22:31 [ENCRYPT] newjeans
-2025-02-28 22:31 [ENCRYPTED_RESPONSE] Encrypted result: OPWLOPVF
-2025-02-28 22:31 [DECRYPT] opwlopvf
-2025-02-28 22:31 [DECRYPTED_RESPONSE] Decrypted result: NEWJEANS
-2025-02-28 22:31 [ENCRYPT] tempest
-2025-02-28 22:31 [ENCRYPTED_RESPONSE] Encrypted result: UPMROHB
-2025-02-28 22:31 [DECRYPT] upmrohb
-2025-02-28 22:31 [DECRYPTED_RESPONSE] Decrypted result: TEMPEST
-2025-02-28 22:31 [HISTORY] Selected command: ENCRYPT blackpink
-2025-02-28 22:31 [ENCRYPT] blackpink
-2025-02-28 22:31 [ENCRYPTED_RESPONSE] Encrypted result: CWAEUEQAU
-2025-02-28 22:31 [QUIT] Driver terminated.
-2025-02-28 22:32 [START] Driver started.
-2025-02-28 22:32 [ERROR] Passkey contains non-alphabetic characters.
-2025-02-28 22:32 [PASSWORD] ****
-2025-02-28 22:32 [INFO] Password set successfully.
-2025-02-28 22:32 [PASSWORD] ***
-2025-02-28 22:32 [INFO] Password set successfully.
-2025-02-28 22:33 [ENCRYPT] supershy
-2025-02-28 22:33 [ENCRYPTED_RESPONSE] Encrypted result: FDORARUH
-2025-02-28 22:33 [DECRYPT] fdoraruh
-2025-02-28 22:33 [DECRYPTED_RESPONSE] Decrypted result: SUPERSHY
-2025-02-28 22:33 [HISTORY] Selected command: ENCRYPT supershy
-2025-02-28 22:33 [ENCRYPT] supershy
-2025-02-28 22:33 [ENCRYPTED_RESPONSE] Encrypted result: FDORARUH
-2025-02-28 22:33 [QUIT] Driver terminated.
-2025-02-28 22:50 [START] Driver started.
-2025-02-28 22:51 [PASSWORD] ***
-2025-02-28 22:51 [INFO] Password set successfully.
-2025-02-28 22:51 [ENCRYPT] ive
-2025-02-28 22:51 [ENCRYPTED_RESPONSE] Encrypted result: QQI
-2025-02-28 22:51 [DECRYPT] qqi
-2025-02-28 22:51 [DECRYPTED_RESPONSE] Decrypted result: IVE
-2025-02-28 22:51 [PASSWORD] **********
-2025-02-28 22:51 [INFO] Password set successfully.
-2025-02-28 22:51 [ENCRYPT] illit
-2025-02-28 22:51 [ENCRYPTED_RESPONSE] Encrypted result: TPDAX
-2025-02-28 22:51 [DECRYPT] tpdax
-2025-02-28 22:51 [DECRYPTED_RESPONSE] Decrypted result: ILLIT
-2025-02-28 22:51 [ENCRYPT] babymonster
-2025-02-28 22:51 [ENCRYPTED_RESPONSE] Encrypted result: METQQFNXBQC
-2025-02-28 22:51 [DECRYPT] metqqfnxbqc
-2025-02-28 22:51 [DECRYPTED_RESPONSE] Decrypted result: BABYMONSTER
-2025-02-28 22:51 [ENCRYPT] bts
-2025-02-28 22:51 [ENCRYPTED_RESPONSE] Encrypted result: MXK
-2025-02-28 22:51 [DECRYPT] mxk
-2025-02-28 22:51 [DECRYPTED_RESPONSE] Decrypted result: BTS
-2025-02-28 22:52 [ENCRYPT] oliviarodrigo
-2025-02-28 22:52 [ENCRYPTED_RESPONSE] Encrypted result: ZPANMRRTLDTKG
-2025-02-28 22:52 [DECRYPT] zpanmrrtldtkg
-2025-02-28 22:52 [DECRYPTED_RESPONSE] Decrypted result: OLIVIARODRIGO
-2025-02-28 22:52 [ENCRYPT] Hanni
-2025-02-28 22:52 [ENCRYPTED_RESPONSE] Encrypted result: SEFFM
-2025-02-28 22:52 [DECRYPT] seffm
-2025-02-28 22:52 [DECRYPTED_RESPONSE] Decrypted result: HANNI
-2025-02-28 22:52 [HISTORY] Selected command: ENCRYPT bts
-2025-02-28 22:52 [ENCRYPT] bts
-2025-02-28 22:52 [ENCRYPTED_RESPONSE] Encrypted result: MXK
-2025-02-28 22:52 [QUIT] Driver terminated.
-2025-02-28 22:56 [START] Driver started.
-2025-02-28 22:56 [PASSWORD] *********
-2025-02-28 22:56 [INFO] Password set successfully.
-2025-02-28 22:56 [ENCRYPT] straykids
-2025-02-28 22:56 [ENCRYPTED_RESPONSE] Encrypted result: KMIAWUQGK
-2025-02-28 22:56 [DECRYPT] kmiawuqgk
-2025-02-28 22:56 [DECRYPTED_RESPONSE] Decrypted result: STRAYKIDS
-2025-02-28 22:56 [HISTORY_RESPONSE] ERROR: You cannot reuse password command for security purposes. Please set up a new password.
-2025-02-28 22:57 [QUIT] Driver terminated.
-2025-02-28 23:00 [START] Driver started.
-2025-02-28 23:00 [PASSWORD] ****
-2025-02-28 23:00 [INFO] Password set successfully.
-2025-02-28 23:00 [ENCRYPT] mina
-2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: EIAA
-2025-02-28 23:00 [DECRYPT] aiaa
-2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: IINA
-2025-02-28 23:00 [ENCRYPT] momo
-2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: EOZO
-2025-02-28 23:00 [DECRYPT] eozo
-2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: MOMO
-2025-02-28 23:00 [ENCRYPT] nayeon
-2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: FALEGN
-2025-02-28 23:00 [DECRYPT] falegn
-2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: NAYEON
-2025-02-28 23:00 [ENCRYPT] jihyo
-2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: BIUYG
-2025-02-28 23:00 [DECRYPT] biuyg
-2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: JIHYO
-2025-02-28 23:00 [PASSWORD] *****
-2025-02-28 23:00 [INFO] Password set successfully.
-2025-02-28 23:00 [ENCRYPT] jeongyeon
-2025-02-28 23:00 [ENCRYPTED_RESPONSE] Encrypted result: CDILARDIL
-2025-02-28 23:00 [DECRYPT] cdilardil
-2025-02-28 23:00 [DECRYPTED_RESPONSE] Decrypted result: JEONGYEON
-2025-02-28 23:01 [HISTORY_RESPONSE] ERROR: You cannot reuse password command for security purposes. Please set up a new password.
-2025-02-28 23:01 [HISTORY_RESPONSE] ERROR: You cannot reuse password command for security purposes. Please set up a new password.
-2025-02-28 23:01 [HISTORY] Selected command: ENCRYPT jeongyeon
-2025-02-28 23:01 [ENCRYPT] jeongyeon
-2025-02-28 23:01 [ENCRYPTED_RESPONSE] Encrypted result: CDILARDIL
-2025-02-28 23:01 [HISTORY] Selected command: DECRYPT cdilardil
-2025-02-28 23:01 [DECRYPT] cdilardil
-2025-02-28 23:01 [DECRYPTED_RESPONSE] Decrypted result: JEONGYEON
-2025-02-28 23:01 [HISTORY] Selected command: ENCRYPT jihyo
-2025-02-28 23:01 [ENCRYPT] jihyo
-2025-02-28 23:01 [ENCRYPTED_RESPONSE] Encrypted result: CHBWI
-2025-02-28 23:01 [HISTORY] Selected command: DECRYPT biuyg
-2025-02-28 23:01 [DECRYPT] biuyg
-2025-02-28 23:01 [DECRYPTED_RESPONSE] Decrypted result: IJAAM
-2025-02-28 23:01 [QUIT] Driver terminated.
-2025-03-04 15:24 [START] Driver started.
-2025-03-04 15:24 [PASSWORD] ****
-2025-03-04 15:24 [INFO] Password set successfully.
-2025-03-04 15:24 [ENCRYPT] rami
-2025-03-04 15:24 [ENCRYPTED_RESPONSE] Encrypted result: BPAX
-2025-03-04 15:24 [DECRYPT] bpax
-2025-03-04 15:24 [DECRYPTED_RESPONSE] Decrypted result: RAMI
-2025-03-04 15:25 [ENCRYPT] hanni
-2025-03-04 15:25 [ENCRYPTED_RESPONSE] Encrypted result: RPBCS
-2025-03-04 15:25 [DECRYPT] rpbcs
-2025-03-04 15:25 [DECRYPTED_RESPONSE] Decrypted result: HANNI
-2025-03-04 15:25 [ENCRYPT] dk
-2025-03-04 15:25 [ENCRYPTED_RESPONSE] Encrypted result: NZ
-2025-03-04 15:25 [DECRYPT] nz
-2025-03-04 15:25 [DECRYPTED_RESPONSE] Decrypted result: DK
-2025-03-04 15:25 [ENCRYPT] haruto
-2025-03-04 15:25 [ENCRYPTED_RESPONSE] Encrypted result: RPFJDD
-2025-03-04 15:25 [DECRYPT] rpfjdd
-2025-03-04 15:25 [DECRYPTED_RESPONSE] Decrypted result: HARUTO
-2025-03-04 15:25 [HISTORY] Selected command: PASSWORD ****
-2025-03-04 15:25 [HISTORY_RESPONSE] ERROR: You cannot reuse password command for security purposes. Please set up a new password.
-2025-03-04 15:25 [HISTORY] Selected command: DECRYPT nz
-2025-03-04 15:25 [DECRYPT] nz
-2025-03-04 15:25 [DECRYPTED_RESPONSE] Decrypted result: DK
-2025-03-04 15:25 [HISTORY] Selected command: DECRYPT nz
-2025-03-04 15:25 [DECRYPT] nz
-2025-03-04 15:25 [DECRYPTED_RESPONSE] Decrypted result: DK
-2025-03-04 15:25 [ENCRYPT] 91919
-2025-03-04 15:25 [ENCRYPTED_RESPONSE] ERROR: Message contains non-alphabetic characters
-2025-03-04 15:25 [ERROR] Passkey contains non-alphabetic characters.
-2025-03-04 15:26 [ENCRYPT] jisoo
-2025-03-04 15:26 [ENCRYPTED_RESPONSE] Encrypted result: TXGDY
-2025-03-04 15:26 [DECRYPT] txgdy
-2025-03-04 15:26 [DECRYPTED_RESPONSE] Decrypted result: JISOO
-2025-03-04 15:26 [ENCRYPT] rose
-2025-03-04 15:26 [ENCRYPTED_RESPONSE] Encrypted result: BDGT
-2025-03-04 15:26 [DECRYPT] bdgt
-2025-03-04 15:26 [DECRYPTED_RESPONSE] Decrypted result: ROSE
-2025-03-04 15:26 [ENCRYPT] lisa
-2025-03-04 15:26 [ENCRYPTED_RESPONSE] Encrypted result: VXGP
-2025-03-04 15:26 [DECRYPT] vxgp
-2025-03-04 15:26 [DECRYPTED_RESPONSE] Decrypted result: LISA
-2025-03-04 15:26 [ENCRYPT] rose
-2025-03-04 15:26 [ENCRYPTED_RESPONSE] Encrypted result: BDGT
-2025-03-04 15:26 [DECRYPT] bdgt
-2025-03-04 15:26 [DECRYPTED_RESPONSE] Decrypted result: ROSE
-2025-03-04 15:26 [ENCRYPT] jennie
-2025-03-04 15:26 [ENCRYPTED_RESPONSE] Encrypted result: TTBCST
-2025-03-04 15:26 [DECRYPT] ttbcst
-2025-03-04 15:26 [DECRYPTED_RESPONSE] Decrypted result: JENNIE
-2025-03-04 15:26 [ENCRYPT] rm
-2025-03-04 15:26 [ENCRYPTED_RESPONSE] Encrypted result: BB
-2025-03-04 15:26 [DECRYPT] bb
-2025-03-04 15:26 [DECRYPTED_RESPONSE] Decrypted result: RM
-2025-03-04 15:26 [ENCRYPT] jungkook
-2025-03-04 15:26 [ENCRYPTED_RESPONSE] Encrypted result: TJBVUDCZ
-2025-03-04 15:26 [DECRYPT] tjbvudcz
-2025-03-04 15:26 [DECRYPTED_RESPONSE] Decrypted result: JUNGKOOK
-2025-03-04 15:26 [ENCRYPT] tzuyu
-2025-03-04 15:26 [ENCRYPTED_RESPONSE] Encrypted result: DOINE
-2025-03-04 15:26 [DECRYPT] doine
-2025-03-04 15:26 [DECRYPTED_RESPONSE] Decrypted result: TZUYU
-2025-03-04 15:27 [ENCRYPT] yuqi
-2025-03-04 15:27 [ENCRYPTED_RESPONSE] Encrypted result: IJEX
-2025-03-04 15:27 [DECRYPT] ijex
-2025-03-04 15:27 [DECRYPTED_RESPONSE] Decrypted result: YUQI
-2025-03-04 15:27 [ENCRYPT] minnie
-2025-03-04 15:27 [ENCRYPTED_RESPONSE] Encrypted result: WXBCST
-2025-03-04 15:27 [DECRYPT] wxbcst
-2025-03-04 15:27 [DECRYPTED_RESPONSE] Decrypted result: MINNIE
-2025-03-04 15:27 [HISTORY] Selected command: ENCRYPT jennie
-2025-03-04 15:27 [ENCRYPT] jennie
-2025-03-04 15:27 [ENCRYPTED_RESPONSE] Encrypted result: TTBCST
-2025-03-04 15:27 [HISTORY] Selected command: ENCRYPT minnie
-2025-03-04 15:27 [ENCRYPT] minnie
-2025-03-04 15:27 [ENCRYPTED_RESPONSE] Encrypted result: WXBCST
-2025-03-04 15:27 [QUIT] Driver terminated.
-2025-03-04 15:48 [START] Driver started.
-2025-03-04 15:48 [QUIT] Driver terminated.
+2025-03-04 15:59 [START] Driver started.
+2025-03-04 15:59 [ERROR] Passkey cannot be empty.
+2025-03-04 15:59 [ERROR] Passkey contains non-alphabetic characters.
+2025-03-04 15:59 [PASSWORD] ****
+2025-03-04 15:59 [INFO] Password set successfully.
+2025-03-04 15:59 [ERROR] Passkey contains non-alphabetic characters.
+2025-03-04 15:59 [ENCRYPT] hanni
+2025-03-04 15:59 [RESULT] Encrypted result: RPBCS
+2025-03-04 15:59 [DECRYPT] rpbcs
+2025-03-04 15:59 [RESULT] Decrypted result: HANNI
+2025-03-04 15:59 [ENCRYPT] nayeon
+2025-03-04 15:59 [RESULT] Encrypted result: XPMTYC
+2025-03-04 15:59 [DECRYPT] xpmtyc
+2025-03-04 15:59 [RESULT] Decrypted result: NAYEON
+2025-03-04 15:59 [ENCRYPT] jun
+2025-03-04 15:59 [RESULT] Encrypted result: TJB
+2025-03-04 15:59 [DECRYPT] tjb
+2025-03-04 15:59 [RESULT] Decrypted result: JUN
+2025-03-04 15:59 [ENCRYPT] hanbin
+2025-03-04 15:59 [RESULT] Encrypted result: RPBQSC
+2025-03-04 16:00 [DECRYPT] rpbqsc
+2025-03-04 16:00 [RESULT] Decrypted result: HANBIN
+2025-03-04 16:00 [ENCRYPT] nien
+2025-03-04 16:00 [RESULT] Encrypted result: XXSC
+2025-03-04 16:00 [DECRYPT] xxsc
+2025-03-04 16:00 [RESULT] Decrypted result: NIEN
+2025-03-04 16:00 [HISTORY] Selected command: PASSWORD ****
+2025-03-04 16:00 [ERROR] You cannot reuse password command for security purposes. Please set up a new password.
+2025-03-04 16:00 [HISTORY] Selected command: ENCRYPT nien
+2025-03-04 16:00 [ENCRYPT] nien
+2025-03-04 16:00 [RESULT] Encrypted result: XXSC
+2025-03-04 16:00 [QUIT] Driver terminated.
+2025-03-04 16:13 [START] Driver started.
+2025-03-04 16:13 [ERROR] Passkey cannot be empty.
+2025-03-04 16:13 [PASSWORD] ****
+2025-03-04 16:13 [INFO] Password set successfully.
+2025-03-04 16:13 [ERROR] Passkey cannot be empty.
+2025-03-04 16:13 [ERROR] Passkey contains non-alphabetic characters.
+2025-03-04 16:13 [RESULT] Invalid input format. It should be '<ACTION> <PLAINTEXT>'
+2025-03-04 16:13 [RESULT] Invalid input format. It should be '<ACTION> <PLAINTEXT>'
+2025-03-04 16:13 [ENCRYPT] jihyo
+2025-03-04 16:13 [RESULT] Encrypted result: TXVNY
+2025-03-04 16:13 [DECRYPT] txvny
+2025-03-04 16:13 [RESULT] Decrypted result: JIHYO
+2025-03-04 16:13 [RESULT] Invalid input format. It should be '<ACTION> <PLAINTEXT>'
+2025-03-04 16:13 [ENCRYPT] momo
+2025-03-04 16:13 [RESULT] Encrypted result: WDAD
+2025-03-04 16:14 [DECRYPT] wdad
+2025-03-04 16:14 [RESULT] Decrypted result: MOMO
+2025-03-04 16:14 [HISTORY] Selected command: ENCRYPT momo
+2025-03-04 16:14 [ENCRYPT] momo
+2025-03-04 16:14 [RESULT] Encrypted result: WDAD
+2025-03-04 16:14 [QUIT] Driver terminated.
+2025-03-04 16:15 [START] Driver started.
+2025-03-04 16:15 [ERROR] No password set. Please use PASSWORD <password>.
+2025-03-04 16:15 [ERROR] Passkey contains non-alphabetic characters.
+2025-03-04 16:15 [ERROR] Passkey cannot be empty.
+2025-03-04 16:15 [PASSWORD] ****
+2025-03-04 16:15 [INFO] Password set successfully.
+2025-03-04 16:15 [ENCRYPT] iroha
+2025-03-04 16:15 [RESULT] Encrypted result: SGCWK
+2025-03-04 16:15 [DECRYPT] sgcwk
+2025-03-04 16:15 [RESULT] Decrypted result: IROHA
+2025-03-04 16:15 [ENCRYPT] kazuha
+2025-03-04 16:15 [RESULT] Encrypted result: UPNJRP
+2025-03-04 16:15 [DECRYPT] upnjrp
+2025-03-04 16:15 [RESULT] Decrypted result: KAZUHA
+2025-03-04 16:15 [ENCRYPT] wonyoung
+2025-03-04 16:15 [RESULT] Encrypted result: GDBNYJBV
+2025-03-04 16:16 [DECRYPT] gdbnyjbv
+2025-03-04 16:16 [RESULT] Decrypted result: WONYOUNG
+2025-03-04 16:16 [HISTORY] Selected command: ENCRYPT wonyoung
+2025-03-04 16:16 [ENCRYPT] wonyoung
+2025-03-04 16:16 [RESULT] Encrypted result: GDBNYJBV
+2025-03-04 16:16 [QUIT] Driver terminated.

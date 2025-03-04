@@ -97,7 +97,7 @@ public class Driver {
                     if (action.equalsIgnoreCase("PASSWORD")) {
                         System.out.println("ERROR: You cannot reuse password command for security purposes. Please set up a new password.");
                         log_writer.println("HISTORY Selected command: " + cmd);
-                        log_writer.println("HISTORY_RESPONSE ERROR: You cannot reuse password command for security purposes. Please set up a new password.");
+                        log_writer.println("ERROR You cannot reuse password command for security purposes. Please set up a new password.");
                         continue;
                     }
                     // otherwise, log and execute the selected command
@@ -128,6 +128,11 @@ public class Driver {
                         System.out.println("ERROR: Passkey contains non-alphabetic characters.");
                         log_writer.println("ERROR Passkey contains non-alphabetic characters.");
                     } 
+                    else if (message == "") {
+                        // passkey cannot be empty
+                        System.out.println("ERROR: Passkey cannot be empty.");
+                        log_writer.println("ERROR Passkey cannot be empty.");
+                    }
                     else {
                         // store message in the password variable
                         password = message;
@@ -145,6 +150,7 @@ public class Driver {
                 else if (action.equalsIgnoreCase("ENCRYPT")) {
                     if (password.isEmpty()) {
                         System.out.println("Error: No password set. Please use PASSWORD <password>.");
+                        log_writer.println("ERROR No password set. Please use PASSWORD <password>.");
                         continue;
                     }
                     encryption_writer.println("ENCRYPT " + message);
@@ -152,13 +158,14 @@ public class Driver {
                     String encrypted_response = encryption_reader.readLine();
                     System.out.println(encrypted_response);
                     log_writer.println("ENCRYPT " + message);
-                    log_writer.println("ENCRYPTED_RESPONSE " + encrypted_response);
+                    log_writer.println("RESULT " + encrypted_response);
                     cmd_history.add("ENCRYPT " + message);  // store original message (not the result)
                 }
                 // DECRYPTION handling
                 else if (action.equalsIgnoreCase("DECRYPT")) {
                     if (password.isEmpty()) {
                         System.out.println("Error: No password set. Please use PASSWORD <password>.");
+                        log_writer.println("ERROR No password set. Please use PASSWORD <password>.");
                         continue;
                     }
                     encryption_writer.println("DECRYPT " + message);
@@ -166,7 +173,7 @@ public class Driver {
                     String decrypted_response = encryption_reader.readLine();
                     System.out.println(decrypted_response);
                     log_writer.println("DECRYPT " + message);
-                    log_writer.println("DECRYPTED_RESPONSE " + decrypted_response);
+                    log_writer.println("RESULT " + decrypted_response);
                     cmd_history.add("DECRYPT " + message);  // store original message (not the result)
                 }
                 // invalid command error handling

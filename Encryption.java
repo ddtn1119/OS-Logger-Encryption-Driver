@@ -78,7 +78,7 @@ public class Encryption {
             // split the input into separate words
             String[] p = input.split("\\s+", 2);
             if (p.length < 2) {
-                System.out.println("Invalid input format. It should be '<ACTION> <PLAINTEXT>'");
+                System.out.println("Invalid input format. It should be '<ACTION> <MESSAGE>'");
                 continue;
             }
             String action = p[0];
@@ -88,6 +88,9 @@ public class Encryption {
                 if (containsNonAlphabetic(content)) {
                     System.out.println("ERROR: Passkey contains non-alphabetic characters");
                 } 
+                else if(content == ""){
+                    System.out.println("ERROR: Passkey is empty");
+                }
                 else {
                     passkey = content;
                 }
@@ -103,6 +106,9 @@ public class Encryption {
                 if(containsNonAlphabetic(content)){
                     System.out.println("ERROR: Message contains non-alphabetic characters");               
                 }
+                else if (content == "") {
+                    System.out.println("ERROR: Message is empty");
+                }
                 else{
                     System.out.println("Encrypted result: " + encrypt(content, passkey));
                 }
@@ -112,6 +118,9 @@ public class Encryption {
             if (action.equalsIgnoreCase("DECRYPT")) {
                 if(containsNonAlphabetic(content)){
                     System.out.println("ERROR: Message contains non-alphabetic characters");               
+                }
+                else if (content == "") {
+                    System.out.println("ERROR: Message is empty");
                 }
                 else{
                     System.out.println("Decrypted result: " + decrypt(content, passkey));
