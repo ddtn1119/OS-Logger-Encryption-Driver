@@ -2,7 +2,9 @@
 
 **Logger.java**: writes log messages to a log file (text file). The log messages are recorded, with a timestamp in 24-hour notation.
 Each line represents a log message.
+
 **Encryption.java**: encrypts an argument (messages, sentences, words, phrases, etc.) using Vigenere cypher and a passkey/password, and then decrypts them.
+
 **Driver.java**: controls the executions/processes of Logger and Encryption programs.
 
 How to compile and test these programs:
