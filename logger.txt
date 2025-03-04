@@ -73,3 +73,21 @@
 2025-03-04 16:16 [ENCRYPT] wonyoung
 2025-03-04 16:16 [RESULT] Encrypted result: GDBNYJBV
 2025-03-04 16:16 [QUIT] Driver terminated.
+2025-03-04 16:20 [START] Driver started.
+2025-03-04 16:20 [ERROR] Passkey cannot be empty.
+2025-03-04 16:20 [ERROR] Passkey contains non-alphabetic characters.
+2025-03-04 16:20 [PASSWORD] ****
+2025-03-04 16:20 [INFO] Password set successfully.
+2025-03-04 16:20 [ENCRYPT] hyunjin
+2025-03-04 16:20 [RESULT] Encrypted result: RNICTXB
+2025-03-04 16:21 [DECRYPT] rnictxb
+2025-03-04 16:21 [RESULT] Decrypted result: HYUNJIN
+2025-03-04 16:21 [ENCRYPT] niki
+2025-03-04 16:21 [RESULT] Encrypted result: XXYX
+2025-03-04 16:21 [DECRYPT] xxyx
+2025-03-04 16:21 [RESULT] Decrypted result: NIKI
+2025-03-04 16:21 [HISTORY] Command history displayed.
+2025-03-04 16:21 [HISTORY] Selected command: ENCRYPT niki
+2025-03-04 16:21 [ENCRYPT] niki
+2025-03-04 16:21 [RESULT] Encrypted result: XXYX
+2025-03-04 16:21 [QUIT] Driver terminated.
